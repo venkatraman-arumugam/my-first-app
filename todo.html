@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo App</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="openModal" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close"><i class="fa fa-remove remove"  onclick=""></i></a>
+			
+			<h2>Add Task</h2>
+			<div>
+				<label>Title</label>
+				<input type="text" name="title" id="title">
+			</div>
+			<div>
+			  <label for="input">Paper Name</label>
+              <div contenteditable="true" id="content" class="textarea"></div>
+            </div>
+            <div class="but">
+            	<a href="#close" title="Close" class="close"><button class="button" onclick="modal_input()">Add</button></a>
+            </div>
+		</div>
+	</div>
+	
+	<div class="notepad" id="outer">
+			<a href="#openModal"><i class="fa fa-plus add" aria-hidden="true"  ondblclick="this.disabled=true;" ></i></a>
+			<div id="tasks">
+				
+			</div>
+	</div>
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
